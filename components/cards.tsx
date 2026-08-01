@@ -9,46 +9,85 @@ import { cn } from '@/lib/utils';
 
 export function ServiceCard({ service, href }: { service: Service; href?: string }) {
   const link = href ?? `/services/${service.slug}`;
+
   return (
     <Spotlight className="h-full">
       <Link
         href={link}
-        className="card-soft card-hover group relative flex h-full flex-col overflow-hidden"
+        className="card-soft card-hover group relative flex h-[380px] overflow-hidden rounded-3xl"
       >
-        <div className="relative h-52 overflow-hidden">
-          <Image
-            src={service.image}
-            alt={service.imageAlt}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-1000 ease-out group-hover:scale-115"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent transition-all duration-700 group-hover:from-primary/95" />
-          
-          {/* Animated shine effect */}
-          <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
-            <div className="absolute inset-0 animate-shine" />
+
+        {/* Background Image */}
+        <Image
+          src={service.image}
+          alt={service.imageAlt}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+          className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+        />
+
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-transparent transition-all duration-700 group-hover:from-primary-dark/95" />
+
+
+        {/* Shine Effect */}
+        <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
+          <div className="absolute inset-0 animate-shine" />
+        </div>
+
+
+        {/* Content */}
+        <div className="absolute inset-x-0 bottom-0 z-10 p-6 text-white">
+
+
+          {/* Icon */}
+          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 backdrop-blur-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+
+            <Icon
+              name={service.icon}
+              className="h-6 w-6 text-white"
+              size={24}
+            />
+
           </div>
 
-          <div className="absolute bottom-3 right-3 left-3 flex items-center gap-2 rounded-xl bg-white/95 px-3 py-2.5 backdrop-blur-md shadow-lift transition-all duration-700 group-hover:-translate-y-2">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary-light text-primary-foreground transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
-              <Icon name={service.icon} className="h-4 w-4" size={18} />
-            </div>
-            <span className="text-sm font-bold text-primary line-clamp-1">{service.shortName}</span>
-          </div>
-        </div>
-        <div className="flex flex-1 flex-col p-5">
-          <p className="mb-3 line-clamp-2 text-sm leading-relaxed text-muted-foreground transition-colors duration-500 group-hover:text-foreground/80">
+
+          {/* Title */}
+          <h3 className="mb-3 text-xl font-bold">
+            {service.shortName}
+          </h3>
+
+
+          {/* Description */}
+          <p className="line-clamp-3 text-sm leading-relaxed text-white/90">
             {service.tagline}
           </p>
-          <div className="mt-auto flex items-center justify-between pt-3">
-            <span className="text-xs font-bold text-accent">{service.priceFromLabel}</span>
-            <span className="flex items-center gap-1 text-sm font-semibold text-primary transition-all duration-500 group-hover:gap-2">
-              التفاصيل
-              <ArrowLeft className="h-4 w-4 transition-transform duration-500 group-hover:-translate-x-1" />
+
+
+          {/* Details */}
+          <div className="mt-4 flex items-center justify-between">
+
+            <span className="text-xs font-bold text-accent-light">
+              {service.priceFromLabel}
             </span>
+
+
+            <span className="flex items-center gap-1 text-sm font-semibold transition-all duration-500 group-hover:gap-2">
+
+              التفاصيل
+
+              <ArrowLeft
+                className="h-4 w-4 transition-transform duration-500 group-hover:-translate-x-1"
+              />
+
+            </span>
+
           </div>
+
+
         </div>
+
       </Link>
     </Spotlight>
   );
@@ -89,51 +128,93 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="card-soft card-hover group flex h-full flex-col overflow-hidden"
+      className="card-soft card-hover group relative flex h-[380px] overflow-hidden rounded-3xl"
     >
-      <div className="relative h-56 overflow-hidden">
-        <Image
-          src={project.gallery[0]}
-          alt={project.galleryAlts[0]}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-1000 ease-out group-hover:scale-115"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-700 group-hover:from-black/95" />
-        
-        {/* Animated overlay */}
-        <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+
+      {/* Background Image */}
+      <Image
+        src={project.gallery[0]}
+        alt={project.galleryAlts[0]}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+      />
+
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent transition-all duration-700 group-hover:from-primary-dark/95" />
+
+
+      {/* Hover Effect */}
+      <div className="absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20" />
+      </div>
+
+
+      {/* Content */}
+      <div className="absolute inset-x-0 bottom-0 z-10 p-6 text-white">
+
+
+        {/* Location + Duration */}
+        <div className="mb-4 flex flex-wrap gap-2">
+
+          <span className="flex items-center gap-1 rounded-full bg-black/40 px-3 py-1 text-xs backdrop-blur-md border border-white/10">
+
+            <MapPin className="h-3.5 w-3.5 text-accent-light" />
+
+            {cityName(project.citySlug)}
+
+          </span>
+
+
+          <span className="flex items-center gap-1 rounded-full bg-black/40 px-3 py-1 text-xs backdrop-blur-md border border-white/10">
+
+            <Calendar className="h-3.5 w-3.5" />
+
+            {project.durationLabel}
+
+          </span>
+
         </div>
 
-        <div className="absolute bottom-3 right-3 left-3 flex items-center justify-between text-white">
-          <span className="flex items-center gap-1 rounded-full bg-black/50 px-2.5 py-1 text-xs backdrop-blur-md border border-white/10 transition-all duration-500 hover:bg-black/70">
-            <MapPin className="h-3.5 w-3.5 text-accent-light" />
-            {cityName(project.citySlug)}
-          </span>
-          <span className="flex items-center gap-1 rounded-full bg-black/50 px-2.5 py-1 text-xs backdrop-blur-md border border-white/10 transition-all duration-500 hover:bg-black/70">
-            <Calendar className="h-3.5 w-3.5" />
-            {project.durationLabel}
-          </span>
-        </div>
-      </div>
-      <div className="flex flex-1 flex-col p-5">
-        <h3 className="mb-2 font-bold text-foreground line-clamp-1 transition-colors duration-500 group-hover:text-primary">
+
+
+        {/* Title */}
+        <h3 className="mb-2 text-xl font-bold line-clamp-1 transition-colors duration-500 group-hover:text-accent-light">
           {project.title}
         </h3>
-        <p className="mb-3 line-clamp-2 text-sm text-muted-foreground">{project.excerpt}</p>
-        <div className="mt-auto flex flex-wrap gap-2">
+
+
+        {/* Description */}
+        <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-white/90">
+          {project.excerpt}
+        </p>
+
+
+        {/* Results */}
+        <div className="flex flex-wrap gap-2">
+
           {project.results.slice(0, 2).map((r) => (
+
             <span
               key={r.label}
-              className="inline-flex items-center gap-1 rounded-full bg-success/10 px-2.5 py-1 text-xs font-medium text-success transition-all duration-500 hover:bg-success/20 hover:scale-105"
+              className="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-xs font-medium backdrop-blur-md"
             >
-              <CheckCircle2 className="h-3 w-3" />
+
+              <CheckCircle2 className="h-3 w-3 text-accent-light" />
+
               {r.value}
+
             </span>
+
           ))}
+
         </div>
+
+
       </div>
+
+
     </Link>
   );
 }

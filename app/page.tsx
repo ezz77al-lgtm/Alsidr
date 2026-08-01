@@ -66,150 +66,177 @@ export default function HomePage() {
       ]}
     >
       {/* ========== Hero Section ========== */}
-<section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-950 to-blue-950 text-white">        <div className="absolute inset-0">
-          <div
-            className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-accent/20 blur-3xl animate-aurora"
-            style={{ animationDuration: '15s' }}
-          />
-          <div
-            className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-primary-light/15 blur-3xl animate-aurora"
-            style={{ animationDuration: '18s', animationDelay: '2s' }}
-          />
-        </div>
-        <div className="absolute inset-0 bg-mesh opacity-20" />
-        <div className="absolute inset-0 bg-grid opacity-[0.03]" />
-        
-        <div className="container-page relative z-10 grid items-center gap-10 py-24 lg:grid-cols-2 lg:py-32">
-          <div className="space-y-6">
-            {/* Badge */}
-            <AnimatedText
-              as="span"
-              text="خبرة 15 عامًا في النظافة والمقاولات بالمملكة"
-              variant="fade-up"
-              delay={100}
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur-md"
-            />
-            <span className="flex items-center gap-2 text-accent-light">
-              <Sparkles className="h-4 w-4" />
-            </span>
+<section className="relative overflow-hidden text-white">
 
-            {/* Main heading */}
-            <AnimatedText
-              as="h1"
-              text="شركة السدر العربية للمقاولات"
-              variant="word-by-word"
-              delay={200}
-              className="text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl xl:text-7xl"
-            />
+  {/* Hero Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src="/hero/hero1.jpg"
+      alt="شركة السدر العربية للمقاولات لتنظيف واجهات المباني الزجاجية في الرياض والسعودية"
+      fill
+      priority
+      sizes="100vw"
+      className="object-cover object-center"
+    />
+  </div>
 
-            <AnimatedText
-              as="p"
-              text="أفضل شركة تنظيف واجهات وخزانات ومكافحة حشرات في الرياض وجميع أنحاء المملكة"
-              variant="fade-up"
-              delay={600}
-              className="block text-xl font-medium text-accent-light sm:text-2xl lg:text-3xl mt-3"
-            />
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-blue-950/80" />
 
-            <AnimatedText
-              as="p"
-              text="نقدم خدمات تنظيف واجهات المباني الزجاجية، تنظيف خزانات المياه، مكافحة الحشرات، جلي الرخام، وتعقيم المنشآت باستخدام أحدث المعدات وفريق متخصص. نخدم الرياض وجميع مدن المملكة العربية السعودية مع ضمان جودة وأسعار تنافسية."
-              variant="fade-up"
-              delay={800}
-              className="max-w-xl text-lg leading-relaxed text-white/90 text-pretty"
-            />
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col gap-3 sm:flex-row pt-4" style={{ animationDelay: '1000ms', opacity: 0, animation: 'fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1000ms both' }}>
-              <MagneticButton strength={0.2}>
-                <Button asChild size="lg" className="group">
-                <Link
-                  href="https://wa.me/966569209216?text=السلام عليكم، إطلعت على موقعكم في جوجل وأرغب في طلب خدمة."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  طلب الخدمة فوراً
-                  <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
-                </Link>
-              </Button>
-              </MagneticButton>
-              <MagneticButton strength={0.2}>
-                <Button asChild size="lg" className="group bg-accent text-white hover:bg-accent-light transition-all duration-500 magnetic-btn overflow-hidden shadow-lift">
-                  <Link href="/services" className="flex items-center gap-2">
-                    استكشف خدماتنا
-                    <ArrowLeft className="h-5 w-5 transition-transform duration-500 group-hover:-translate-x-1" />
-                  </Link>
-                </Button>
-              </MagneticButton>
-              <MagneticButton strength={0.2}>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="group border-white/30 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 hover:text-white transition-all duration-500 magnetic-btn overflow-hidden"
-                >
-                  <a href={`tel:${company.phone}`} dir="ltr" className="flex items-center gap-2">
-                    <Phone className="h-5 w-5 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12" />
-                    {company.phone}
-                  </a>
-                </Button>
-              </MagneticButton>
-            </div>
+  {/* Animated Background Effects */}
+  <div className="absolute inset-0">
+    <div
+      className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-accent/20 blur-3xl animate-aurora"
+      style={{ animationDuration: '15s' }}
+    />
 
-            {/* Trust indicators */}
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm pt-6" style={{ animationDelay: '1200ms', opacity: 0, animation: 'fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1200ms both' }}>
-              <span className="flex items-center gap-2">
-                <Star className="h-4 w-4 text-accent-light fill-accent-light" />
-                تقييم 4.9/5 من 3,800+ عميل
-              </span>
-              <span className="flex items-center gap-2">
-                <CheckCircle2 className="h-4 w-4 text-accent-light" />
-                شهادات ISO ووزارة الصحة
-              </span>
-            </div>
-          </div>
+    <div
+      className="absolute -right-32 bottom-0 h-96 w-96 rounded-full bg-primary-light/15 blur-3xl animate-aurora"
+      style={{ animationDuration: '18s', animationDelay: '2s' }}
+    />
+  </div>
 
-          {/* Hero Image */}
-          <div className="relative animate-fade-in delay-300">
-            <Parallax speed={0.1}>
-              <TiltCard maxTilt={6} className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/20 shadow-lift">
-                <Image
-                  src="/hero/hero1.jpg"
-                  alt="شركة السدر العربية للمقاولات لتنظيف واجهات المباني الزجاجية في الرياض والسعودية"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-contain object-cover scale-80 transition-transform duration-1000 hover:scale-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/50 to-transparent" />
-              </TiltCard>
-            </Parallax>
 
-            {/* Floating stat card */}
-            <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-white p-5 text-foreground shadow-lift animate-float sm:block" style={{ animationDuration: '5s' }}>
-              <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-success/20 to-success/10 text-success">
-                  <ShieldCheck className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-gradient">+5,200</p>
-                  <p className="text-xs text-muted-foreground">مشروع منفذ بنجاح</p>
-                </div>
-              </div>
-            </div>
+  <div className="absolute inset-0 bg-mesh opacity-20" />
+  <div className="absolute inset-0 bg-grid opacity-[0.03]" />
 
-            {/* Floating badge */}
-            <div className="absolute -top-4 -right-4 hidden rounded-xl bg-gradient-to-br from-accent to-accent-light px-4 py-2 text-white shadow-lift animate-float sm:block" style={{ animationDuration: '6s', animationDelay: '0.5s' }}>
-              <p className="text-xs font-bold flex items-center gap-1">
-                <Award className="h-3 w-3" />
-                معتمد ISO
-              </p>
-            </div>
-          </div>
-        </div>
 
-        {/* Bottom wave separator */}
-        <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent animate-shimmer" />
-      </section>
+  {/* Content */}
+  <div className="container-page relative z-10 py-24 lg:py-32">
+
+    <div className="max-w-4xl space-y-6">
+
+
+      {/* Badge */}
+      <AnimatedText
+        as="span"
+        text="خبرة 15 عامًا في النظافة والمقاولات بالمملكة"
+        variant="fade-up"
+        delay={100}
+        className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm backdrop-blur-md"
+      />
+
+
+      <span className="flex items-center gap-2 text-accent-light">
+        <Sparkles className="h-4 w-4" />
+      </span>
+
+
+      {/* Main heading */}
+      <AnimatedText
+        as="h1"
+        text="شركة السدر العربية للمقاولات"
+        variant="word-by-word"
+        delay={200}
+        className="text-4xl font-bold leading-tight text-balance sm:text-5xl lg:text-6xl xl:text-7xl"
+      />
+
+
+      <AnimatedText
+        as="p"
+        text="أفضل شركة تنظيف واجهات وخزانات ومكافحة حشرات في الرياض وجميع أنحاء المملكة"
+        variant="fade-up"
+        delay={600}
+        className="block text-xl font-medium text-accent-light sm:text-2xl lg:text-3xl mt-3"
+      />
+
+
+      <AnimatedText
+        as="p"
+        text="نقدم خدمات تنظيف واجهات المباني الزجاجية، تنظيف خزانات المياه، مكافحة الحشرات، جلي الرخام، وتعقيم المنشآت باستخدام أحدث المعدات وفريق متخصص. نخدم الرياض وجميع مدن المملكة العربية السعودية مع ضمان جودة وأسعار تنافسية."
+        variant="fade-up"
+        delay={800}
+        className="max-w-2xl text-lg leading-relaxed text-white/90 text-pretty"
+      />
+
+
+      {/* CTA Buttons */}
+      <div
+        className="flex flex-col gap-3 sm:flex-row pt-4"
+        style={{
+          animationDelay: '1000ms',
+          opacity: 0,
+          animation:
+            'fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1000ms both'
+        }}
+      >
+
+        <MagneticButton strength={0.2}>
+          <Button asChild size="lg" className="group">
+            <Link
+              href="https://wa.me/966569209216?text=السلام عليكم، إطلعت على موقعكم في جوجل وأرغب في طلب خدمة."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              طلب الخدمة فوراً
+              <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
+            </Link>
+          </Button>
+        </MagneticButton>
+
+
+        <MagneticButton strength={0.2}>
+          <Button
+            asChild
+            size="lg"
+            className="group bg-accent text-white hover:bg-accent-light transition-all duration-500 magnetic-btn overflow-hidden shadow-lift"
+          >
+            <Link href="/services" className="flex items-center gap-2">
+              استكشف خدماتنا
+              <ArrowLeft className="h-5 w-5 transition-transform duration-500 group-hover:-translate-x-1" />
+            </Link>
+          </Button>
+        </MagneticButton>
+
+
+        <MagneticButton strength={0.2}>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="group border-white/30 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 hover:text-white transition-all duration-500 magnetic-btn overflow-hidden"
+          >
+            <a
+              href={`tel:${company.phone}`}
+              dir="ltr"
+              className="flex items-center gap-2"
+            >
+              <Phone className="h-5 w-5 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12" />
+              {company.phone}
+            </a>
+          </Button>
+        </MagneticButton>
+
+      </div>
+
+
+      {/* Trust indicators */}
+      <div
+        className="flex flex-wrap items-center gap-x-8 gap-y-3 text-sm pt-6"
+      >
+
+        <span className="flex items-center gap-2">
+          <Star className="h-4 w-4 text-accent-light fill-accent-light" />
+          تقييم 4.9/5 من 3,800+ عميل
+        </span>
+
+        <span className="flex items-center gap-2">
+          <CheckCircle2 className="h-4 w-4 text-accent-light" />
+          شهادات ISO ووزارة الصحة
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  {/* Bottom Separator */}
+  <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent animate-shimmer" />
+
+</section>
 
       
       {/* ========== Our Services ========== */}
@@ -393,56 +420,102 @@ export default function HomePage() {
         </section>
       </Reveal>
 
-      {/* ========== Before & After ========== */}
-      <Reveal>
-        <section className="section-padding bg-surface relative overflow-hidden">
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-accent/5 blur-3xl animate-float-slow" />
-          </div>
-          <div className="container-page relative z-10">
-            <SectionHeading
-              eyebrow="قبل وبعد"
-              title="شاهد الفرق بأنفسكم"
-              description="نتائج حقيقية من مشاريعنا تظهر جودة خدماتنا وأثرها الواضح."
-            />
-            <div className="grid gap-8 lg:grid-cols-2">
-              {featuredProjects.slice(0, 4).map((project, i) => (
-                <Reveal key={project.slug} delay={i * 120} as="div">
-                  <TiltCard maxTilt={4} className="card-soft card-hover overflow-hidden transition-all duration-500">
-                    <div className="grid grid-cols-2">
-                      <div className="relative aspect-square overflow-hidden group">
-                        <Image
-                          src={project.beforeImage}
-                          alt={project.beforeAlt}
-                          fill
-                          sizes="(max-width: 1024px) 50vw, 25vw"
-                          className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                        <span className="absolute right-3 top-3 rounded-lg bg-black/70 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm border border-white/10 transition-all duration-500 hover:bg-black/90">قبل</span>
-                      </div>
-                      <div className="relative aspect-square overflow-hidden group">
-                        <Image
-                          src={project.afterImage}
-                          alt={project.afterAlt}
-                          fill
-                          sizes="(max-width: 1024px) 50vw, 25vw"
-                          className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        />
-                        <span className="absolute right-3 top-3 rounded-lg bg-black/70 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm border border-white/10 transition-all duration-500 hover:bg-black/90">بعد</span>
-                      </div>
-                    </div>
-                    <div className="p-5">
-                      <h3 className="mb-1 font-bold text-foreground transition-colors duration-500 hover:text-primary">{project.title}</h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2">{project.excerpt}</p>
-                    </div>
-                  </TiltCard>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      </Reveal>
+{/* ========== Before & After ========== */}
+<Reveal>
+  <section className="section-padding bg-surface relative overflow-hidden">
 
+    <div className="absolute inset-0 -z-10">
+      <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-accent/5 blur-3xl animate-float-slow" />
+    </div>
+
+
+    <div className="container-page relative z-10">
+
+      <SectionHeading
+        eyebrow="قبل وبعد"
+        title="شاهد الفرق بأنفسكم"
+        description="نتائج حقيقية من مشاريعنا تظهر جودة خدماتنا وأثرها الواضح."
+      />
+
+
+      <div className="grid gap-8 lg:grid-cols-2">
+
+        {featuredProjects.slice(0, 4).map((project, i) => (
+
+          <Reveal key={project.slug} delay={i * 120} as="div">
+
+            <TiltCard
+              maxTilt={4}
+              className="card-soft card-hover relative h-[420px] overflow-hidden rounded-3xl"
+            >
+
+
+              {/* After Image Background */}
+              <Image
+                src={project.afterImage}
+                alt={project.afterAlt}
+                fill
+                sizes="(max-width:1024px) 100vw, 50vw"
+                className="object-cover transition-transform duration-1000 hover:scale-110"
+              />
+
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+
+
+              {/* Before Small Image */}
+              <div className="absolute right-5 top-5 h-28 w-28 overflow-hidden rounded-2xl border-2 border-white/30 shadow-xl">
+
+                <Image
+                  src={project.beforeImage}
+                  alt={project.beforeAlt}
+                  fill
+                  className="object-cover"
+                />
+
+                <span className="absolute bottom-2 right-2 rounded-md bg-black/70 px-2 py-1 text-xs font-bold text-white backdrop-blur-md">
+                  قبل
+                </span>
+
+              </div>
+
+
+              {/* After Badge */}
+              <span className="absolute left-5 top-5 rounded-lg bg-accent px-3 py-1 text-xs font-bold text-white shadow-lg">
+                بعد
+              </span>
+
+
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+
+
+                <h3 className="mb-2 text-xl font-bold transition-colors duration-500 hover:text-accent-light">
+                  {project.title}
+                </h3>
+
+
+                <p className="line-clamp-2 text-sm leading-relaxed text-white/90">
+                  {project.excerpt}
+                </p>
+
+
+              </div>
+
+
+            </TiltCard>
+
+          </Reveal>
+
+        ))}
+
+      </div>
+
+    </div>
+
+  </section>
+</Reveal>
             {/* ========== Service Categories ========== */}
       <Reveal>
         <section className="py-16 bg-background">
