@@ -682,8 +682,7 @@ export default function HomePage() {
           </div>
         </section>
       </Reveal>
-{/* ========== Partners (Marquee) ========== */}
-{/* ========== Partners (Marquee) ========== */}
+
 {/* ========== Partners (Marquee) ========== */}
 <Reveal>
   <section className="py-16 sm:py-20 lg:py-24 bg-muted/40 relative overflow-hidden">
@@ -703,12 +702,12 @@ export default function HomePage() {
       <div className="mb-6 sm:mb-8">
         <Marquee speed="normal" pauseOnHover>
           {[
-            { id: 'p1', name: 'شركة أرامكو', logo: '/clients/client1.jpg' },
-            { id: 'p2', name: 'شركة الكهرباء', logo: '/clients/client2.jpg' },
-            { id: 'p3', name: 'شركة المياه', logo: '/clients/client3.jpg' },
-            { id: 'p4', name: 'شركة الاتصالات', logo: '/clients/client4.jpg' },
-            { id: 'p5', name: 'شركة البناء', logo: '/clients/client5.jpg' },
-            { id: 'p6', name: 'شركة النقل', logo: '/clients/client6.jpg' },
+            { id: 'p1', name: 'مجموعة الشائع', logo: '/clients/client4.jpg' },
+            { id: 'p2', name: 'شركة الدرع الواقي للحراسات الامنيه', logo: '/clients/client5.jpg' },
+            { id: 'p3', name: 'شركة ابيات', logo: '/clients/client6.jpg' },
+            { id: 'p4', name: 'شركة العيسائي للسيارات', logo: '/clients/client1.jpg' },
+            { id: 'p5', name: 'شركة رمال المحيط للتجارة', logo: '/clients/client2.jpg' },
+            { id: 'p6', name: 'شركة الجفالي', logo: '/clients/client3.jpg' },
           ].map((partner) => (
             <div key={partner.id} className="partner-card-premium shrink-0">
               {/* Corner Accents */}
@@ -742,12 +741,12 @@ export default function HomePage() {
       <div className="mb-6 sm:mb-8">
       <Marquee reverse speed="slow" pauseOnHover>
         {[
-          { id: 'p7', name: 'شركة أرامكو', logo: '/clients/client7.jpg' },
-          { id: 'p8', name: 'شركة الكهرباء', logo: '/clients/client8.jpg' },
-          { id: 'p9', name: 'شركة المياه', logo: '/clients/client9.jpg' },
-          { id: 'p10', name: 'شركة الاتصالات', logo: '/clients/client10.jpg' },
-          { id: 'p11', name: 'شركة البناء', logo: '/clients/client11.jpg' },
-          { id: 'p12', name: 'شركة النقل', logo: '/clients/client12.jpg' },
+          { id: 'p7', name: 'شركة رولكس', logo: '/clients/client7.jpg' },
+          { id: 'p8', name: 'د.سليمان الحبيب', logo: '/clients/client8.jpg' },
+          { id: 'p9', name: 'شركة باتشي', logo: '/clients/client9.jpg' },
+          { id: 'p10', name: 'شركة لكزس', logo: '/clients/client10.jpg' },
+          { id: 'p11', name: 'شركة تويوتا', logo: '/clients/client11.jpg' },
+          { id: 'p12', name: 'شركة القثمي', logo: '/clients/client12.jpg' },
         ].map((partner) => (
           <div key={partner.id} className="partner-card-premium shrink-0">
             {/* Corner Accents */}
@@ -780,12 +779,12 @@ export default function HomePage() {
       <div className="mb-6 sm:mb-8">
         <Marquee speed="normal" pauseOnHover>
           {[
-            { id: 'p1', name: 'شركة أرامكو', logo: '/clients/client4.jpg' },
-            { id: 'p2', name: 'شركة الكهرباء', logo: '/clients/client5.jpg' },
-            { id: 'p3', name: 'شركة المياه', logo: '/clients/client6.jpg' },
-            { id: 'p4', name: 'شركة الاتصالات', logo: '/clients/client1.jpg' },
-            { id: 'p5', name: 'شركة البناء', logo: '/clients/client2.jpg' },
-            { id: 'p6', name: 'شركة النقل', logo: '/clients/client3.jpg' },
+            { id: 'p1', name: 'مجموعة الشائع', logo: '/clients/client4.jpg' },
+            { id: 'p2', name: 'شركة الدرع الواقي للحراسات الامنيه', logo: '/clients/client5.jpg' },
+            { id: 'p3', name: 'شركة ابيات', logo: '/clients/client6.jpg' },
+            { id: 'p4', name: 'شركة العيسائي للسيارات', logo: '/clients/client1.jpg' },
+            { id: 'p5', name: 'شركة رمال المحيط للتجارة', logo: '/clients/client2.jpg' },
+            { id: 'p6', name: 'شركة الجفالي', logo: '/clients/client3.jpg' },
           ].map((partner) => (
             <div key={partner.id} className="partner-card-premium shrink-0">
               {/* Corner Accents */}
@@ -818,12 +817,13 @@ export default function HomePage() {
       {/* Marquee Row 2 (Reverse) */}
       <Marquee reverse speed="slow" pauseOnHover>
         {[
-          { id: 'p7', name: 'شركة أرامكو', logo: '/clients/client10.jpg' },
-          { id: 'p8', name: 'شركة الكهرباء', logo: '/clients/client11.jpg' },
-          { id: 'p9', name: 'شركة المياه', logo: '/clients/client12.jpg' },
-          { id: 'p10', name: 'شركة الاتصالات', logo: '/clients/client7.jpg' },
-          { id: 'p11', name: 'شركة البناء', logo: '/clients/client8.jpg' },
-          { id: 'p12', name: 'شركة النقل', logo: '/clients/client9.jpg' },
+          { id: 'p7', name: 'شركة رولكس', logo: '/clients/client7.jpg' },
+          { id: 'p8', name: 'د.سليمان الحبيب', logo: '/clients/client8.jpg' },
+          { id: 'p9', name: 'شركة باتشي', logo: '/clients/client9.jpg' },
+          { id: 'p10', name: 'شركة لكزس', logo: '/clients/client10.jpg' },
+          { id: 'p11', name: 'شركة تويوتا', logo: '/clients/client11.jpg' },
+          { id: 'p12', name: 'شركة القثمي', logo: '/clients/client12.jpg' },
+
         ].map((partner) => (
           <div key={partner.id} className="partner-card-premium shrink-0">
             {/* Corner Accents */}
@@ -917,35 +917,66 @@ export default function HomePage() {
             />
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {latestPosts.map((post, i) => (
-                <Reveal key={post.slug} delay={i * 100} as="div">
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="card-soft card-hover group flex h-full flex-col overflow-hidden transition-all duration-500"
-                  >
-                    <div className="relative h-48 overflow-hidden">
-                      <Image
-                        src={post.image}
-                        alt={post.imageAlt}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-115"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent transition-opacity duration-500 group-hover:from-black/60" />
-                    </div>
-                    <div className="flex flex-1 flex-col p-5">
-                      <span className="mb-2 inline-flex w-fit items-center rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-white">
-                        {post.category}
-                      </span>
-                      <h3 className="mb-2 font-bold text-foreground line-clamp-2 transition-colors duration-500 group-hover:text-primary">{post.title}</h3>
-                      <p className="mb-3 line-clamp-2 text-sm text-muted-foreground">{post.excerpt}</p>
-                      <span className="mt-auto flex items-center gap-1 text-xs text-muted-foreground transition-all duration-500 group-hover:text-primary group-hover:gap-2">
-                        {post.readTimeLabel}
-                        <ArrowLeft className="h-3.5 w-3.5 transition-transform duration-500 group-hover:-translate-x-1" />
-                      </span>
-                    </div>
-                  </Link>
-                </Reveal>
-              ))}
+  <Reveal key={post.slug} delay={i * 100} as="div">
+
+    <Link
+      href={`/blog/${post.slug}`}
+      className="card-soft card-hover group relative flex h-[380px] overflow-hidden rounded-3xl"
+    >
+
+      {/* Background Image */}
+      <Image
+        src={post.image}
+        alt={post.imageAlt}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+      />
+
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-700 group-hover:from-primary-dark/90" />
+
+
+      {/* Content */}
+      <div className="absolute inset-x-0 bottom-0 z-10 p-6 text-white">
+
+
+        {/* Category */}
+        <span className="mb-3 inline-flex w-fit items-center rounded-full bg-white/20 px-3 py-1 text-xs font-medium backdrop-blur-md">
+          {post.category}
+        </span>
+
+
+        {/* Title */}
+        <h3 className="mb-3 text-xl font-bold line-clamp-2 transition-colors duration-500 group-hover:text-accent-light">
+          {post.title}
+        </h3>
+
+
+        {/* Description */}
+        <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-white/90">
+          {post.excerpt}
+        </p>
+
+
+        {/* Read Time */}
+        <span className="flex items-center gap-2 text-xs text-white/80 transition-all duration-500 group-hover:text-accent-light">
+
+          {post.readTimeLabel}
+
+          <ArrowLeft className="h-3.5 w-3.5 transition-transform duration-500 group-hover:-translate-x-1" />
+
+        </span>
+
+
+      </div>
+
+
+    </Link>
+
+  </Reveal>
+))}
             </div>
             <div className="mt-12 text-center">
               <MagneticButton strength={0.15}>
