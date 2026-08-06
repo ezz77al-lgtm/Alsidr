@@ -163,7 +163,7 @@ export default function HomePage() {
       >
 
         <MagneticButton strength={0.2}>
-          <Button asChild size="lg" className="group">
+          <Button asChild size="lg" className="group bg-emerald-500">
             <Link
               href="https://wa.me/966569209216?text=السلام عليكم، إطلعت على موقعكم في جوجل وأرغب في طلب خدمة."
               target="_blank"
@@ -302,7 +302,7 @@ export default function HomePage() {
 
           {/* بطاقة الخبرة */}
           <div
-            className="absolute top-0 right-2 block rounded-2xl bg-primary px-6 py-4 text-white shadow-2xl sm:block"
+            className="absolute top-0 right-2 block rounded-2xl bg-emerald-500 px-6 py-4 text-white shadow-2xl sm:block"
             style={{
               animation: "float 5s ease-in-out infinite",
             }}
@@ -779,12 +779,14 @@ export default function HomePage() {
       <div className="mb-6 sm:mb-8">
         <Marquee speed="normal" pauseOnHover>
           {[
-            { id: 'p1', name: 'مجموعة الشائع', logo: '/clients/client4.jpg' },
-            { id: 'p2', name: 'شركة الدرع الواقي للحراسات الامنيه', logo: '/clients/client5.jpg' },
-            { id: 'p3', name: 'شركة ابيات', logo: '/clients/client6.jpg' },
             { id: 'p4', name: 'شركة العيسائي للسيارات', logo: '/clients/client1.jpg' },
             { id: 'p5', name: 'شركة رمال المحيط للتجارة', logo: '/clients/client2.jpg' },
             { id: 'p6', name: 'شركة الجفالي', logo: '/clients/client3.jpg' },
+            { id: 'p1', name: 'مجموعة الشائع', logo: '/clients/client4.jpg' },
+            { id: 'p2', name: 'شركة الدرع الواقي للحراسات الامنيه', logo: '/clients/client5.jpg' },
+            { id: 'p3', name: 'شركة ابيات', logo: '/clients/client6.jpg' },
+            
+            
           ].map((partner) => (
             <div key={partner.id} className="partner-card-premium shrink-0">
               {/* Corner Accents */}
@@ -817,13 +819,13 @@ export default function HomePage() {
       {/* Marquee Row 2 (Reverse) */}
       <Marquee reverse speed="slow" pauseOnHover>
         {[
+          { id: 'p12', name: 'شركة القثمي', logo: '/clients/client12.jpg' },
+          { id: 'p11', name: 'شركة تويوتا', logo: '/clients/client11.jpg' },
+          { id: 'p10', name: 'شركة لكزس', logo: '/clients/client10.jpg' },
+          { id: 'p9', name: 'شركة باتشي', logo: '/clients/client9.jpg' },
           { id: 'p7', name: 'شركة رولكس', logo: '/clients/client7.jpg' },
           { id: 'p8', name: 'د.سليمان الحبيب', logo: '/clients/client8.jpg' },
-          { id: 'p9', name: 'شركة باتشي', logo: '/clients/client9.jpg' },
-          { id: 'p10', name: 'شركة لكزس', logo: '/clients/client10.jpg' },
-          { id: 'p11', name: 'شركة تويوتا', logo: '/clients/client11.jpg' },
-          { id: 'p12', name: 'شركة القثمي', logo: '/clients/client12.jpg' },
-
+          
         ].map((partner) => (
           <div key={partner.id} className="partner-card-premium shrink-0">
             {/* Corner Accents */}
