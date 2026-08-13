@@ -54,7 +54,7 @@ export function generateServiceCityContent(
   const full = withCitySuffix(service.name, city.name);
 
   const introOpeners = [
-    `تقدم شركة السدر العربية للمقاولات خدمة ${service.name} في ${city.name} بخبرة تتجاوز 15 عامًا في servicing المنشآت السكنية والتجارية والصناعية.`,
+    `تقدم شركة السدر العربية للمقاولات خدمة ${service.name} في ${city.name} بخبرة تتجاوز 15 عامًا في خدمة المنشآت السكنية والتجارية والصناعية.`,
     `إذا كنت تبحث عن خدمة ${service.name} في ${city.name} تنفذها فرق محترفة ومعدات حديثة، فإن شركة السدر العربية للمقاولات خيارك الموثوق.`,
     `خدمة ${service.name} في ${city.name} من شركة السدر العربية للمقاولات تجمع بين الخبرة والاحتراف لضمان نتائج تفوق توقعاتك.`,
     `في ${city.name}، تبرز شركة السدر العربية للمقاولات كاسم رائد في ${service.name}، بفضل فريقها المتخصص والتزامها بمعايير الجودة العالمية.`,
@@ -191,7 +191,7 @@ export function generateServiceCityContent(
   ];
 
   const seoTitle = `${service.name} ب${city.name} | شركة السدر العربية للمقاولات`;
-  const metaDescription = `${service.name} في ${city.name} بفرق محترفة ومعدات حديثة وضمان موثق. ${company.name} - خبرة 15 عامًا في servicing المنشآت السكنية والتجارية والصناعية. اطلب عرض سعر مجاني.`;
+  const metaDescription = `${service.name} في ${city.name} بفرق محترفة ومعدات حديثة وضمان موثق. ${company.name} - خبرة 15 عامًا في خدمة المنشآت السكنية والتجارية والصناعية. اطلب عرض سعر مجاني.`;
   const h1 = `${service.name} ب${city.name}`;
 
   return {
