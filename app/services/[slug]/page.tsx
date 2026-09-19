@@ -113,7 +113,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-     <Reveal>
+     {/* <Reveal>
 <section className="section-padding">
   <div className="container-page max-w-5xl">
     <SectionHeading
@@ -215,7 +215,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
     </div>
   </div>
 </section>
-</Reveal>
+</Reveal> */}
       {/* Benefits & Features */}
       <Reveal>
       <section className="section-padding bg-muted/40">
@@ -362,7 +362,7 @@ title="المعدات التي نستخدمها"
         <div className="container-page">
           <SectionHeading
             eyebrow="مناطق التغطية"
-            title={`${service.name} في كل مدن المملكة`}
+            title={`${service.name} في كل مناطق الرياض`}
             description="نقدم هذه الخدمة في جميع المدن الرئيسية. اختر مدينتك للوصول إلى المحتوى المحلي."
           />
           <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-4">

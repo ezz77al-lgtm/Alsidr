@@ -41,7 +41,8 @@ const whyChooseUs = [
   { icon: 'ShieldCheck', title: 'ضمان موثق', desc: 'نقدم ضمانًا موثقًا على جميع خدماتنا يختلف حسب نوع الخدمة ومدتها.' },
   { icon: 'Users', title: 'فريق متخصص', desc: 'أكثر من 240 فنيًا مدرّبًا على أحدث المعدات والبروتوكولات الصحية.' },
   { icon: 'Clock', title: 'خدمة 24/7', desc: 'فريق طوارئ متاح خارج الدوام وفي الإجازات لخدماتك العاجلة.' },
-  { icon: 'MapPin', title: 'تغطية واسعة', desc: 'نخدم 18 مدينة رئيسية في المملكة مع تغطية للأحياء والضواحي.' },
+  // { icon: 'MapPin', title: 'تغطية واسعة', desc: 'نخدم 18 مدينة رئيسية في المملكة مع تغطية للأحياء والضواحي.' },
+  { icon: 'MapPin',title: 'التغطية',desc: 'نخدم مدينة الرياض وجميع أحيائها وضواحيها، مع تقديم خدمات متكاملة تلبي احتياجات العملاء.',},
   { icon: 'BadgeCheck', title: 'شهادات معتمدة', desc: 'حاصلون على شهادات ISO ومناعة الصحة واعتماد مكافحة الحشرات.' },
 ];
 
@@ -871,7 +872,8 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="مناطق التغطية"
               title="نخدمكم في كل مدن المملكة"
-              description="فروعنا وفرقنا تغطي 18 مدينة رئيسية في المملكة العربية السعودية."
+              description="نقدم خدماتنا في مدينة الرياض وجميع أحيائها وضواحيها، مع حلول متخصصة تلبي احتياجات العملاء."
+              // description="فروعنا وفرقنا تغطي 18 مدينة رئيسية في المملكة العربية السعودية."
             />
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-4">
               {topCities.map((city, i) => (
@@ -884,7 +886,7 @@ export default function HomePage() {
               <MagneticButton strength={0.15}>
                 <Button asChild variant="outline" size="lg" className="group magnetic-btn overflow-hidden">
                   <Link href="/cities" className="flex items-center gap-2">
-                    عرض كل المدن
+                   استعراض ←  
                     <ArrowLeft className="h-4 w-4 transition-transform duration-500 group-hover:-translate-x-1" />
                   </Link>
                 </Button>

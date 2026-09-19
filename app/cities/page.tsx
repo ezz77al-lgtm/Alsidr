@@ -10,8 +10,10 @@ import { buildMetadata, buildCrumbs, breadcrumbSchema } from '@/lib/seo';
 
 export const metadata = buildMetadata({
   title: 'مناطق التغطية | شركة السدر العربية للمقاولات',
+  // description:
+  //   'نقدم خدمات النظافة في 18 مدينة رئيسية بالمملكة العربية السعودية: الرياض، جدة، مكة، المدينة المنورة، الدمام، الخبر، أبها، تبوك، حائل، القصيم وغيرها.',
   description:
-    'نقدم خدمات النظافة في 18 مدينة رئيسية بالمملكة العربية السعودية: الرياض، جدة، مكة، المدينة المنورة، الدمام، الخبر، أبها، تبوك، حائل، القصيم وغيرها.',
+  'نقدم خدمات النظافة والصيانة ومكافحة الحشرات في مدينة الرياض وجميع أحيائها وضواحيها، بجودة واحترافية عالية.',
   path: '/cities',
 });
 
@@ -28,8 +30,10 @@ export default function CitiesPage() {
         <div className="container-page">
           <SectionHeading
             eyebrow="مناطق التغطية"
-            title="نخدمكم في كل مدن المملكة"
-            description="فروعنا وفرقنا تغطي 18 مدينة رئيسية في المملكة العربية السعودية، مع تغطية للأحياء والضواحي."
+            // title="نخدمكم في كل مدن المملكة"
+            title="نخدمك في مدينة الرياض وجميع أحيائها"
+            // description="فروعنا وفرقنا تغطي 18 مدينة رئيسية في المملكة العربية السعودية، مع تغطية للأحياء والضواحي."
+            description="نقدم خدماتنا في مدينة الرياض وجميع أحيائها وضواحيها، مع حلول متخصصة تلبي احتياجات العملاء."
           />
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {cities.map((city) => (
@@ -39,7 +43,7 @@ export default function CitiesPage() {
 
           {/* List view for SEO */}
           <div className="mt-16">
-            <h2 className="mb-6 text-2xl font-bold text-foreground">جميع المدن</h2>
+            <h2 className="mb-6 text-2xl font-bold text-foreground">المُدن</h2> {/* جميع المدن */}
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {cities.map((city) => (
                 <Link
