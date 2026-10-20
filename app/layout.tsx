@@ -1,6 +1,8 @@
+
 import './globals.css';
 import type { Metadata } from 'next';
 import { Tajawal, Amiri } from 'next/font/google';
+import { GoogleAnalytics } from '@/lib/analytics';
 
 const tajawal = Tajawal({
   subsets: ['arabic', 'latin'],
@@ -100,7 +102,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl" className={`${tajawal.variable} ${amiri.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        {children}
+        <GoogleAnalytics />
+      </body>
     </html>
   );
 }
