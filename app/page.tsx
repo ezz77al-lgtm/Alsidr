@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { TrackedLink } from '@/components/analytics/tracked-link';
 import {
   Phone, ArrowLeft, CheckCircle2, ShieldCheck, Clock, Award,
   Users, MapPin, Star, Sparkles,
@@ -163,18 +164,26 @@ export default function HomePage() {
         }}
       >
 
-        <MagneticButton strength={0.2}>
-          <Button asChild size="lg" className="group bg-emerald-500">
-            <Link
-              href="https://wa.me/966569209216?text=السلام عليكم، إطلعت على موقعكم في جوجل وأرغب في طلب خدمة."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              طلب الخدمة فوراً
-              <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
-            </Link>
-          </Button>
-        </MagneticButton>
+
+
+<MagneticButton strength={0.2}>
+  <Button asChild size="lg" className="group bg-emerald-500">
+    <TrackedLink
+      href="https://wa.me/966569209216?text=السلام عليكم، إطلعت على موقعكم في جوجل وأرغب في طلب خدمة."
+      target="_blank"
+      rel="noopener noreferrer"
+      eventName="whatsapp_click"
+      eventParameters={{
+        button_location: 'homepage_hero',
+      }}
+    >
+      طلب الخدمة فوراً
+      <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
+    </TrackedLink>
+  </Button>
+</MagneticButton>
+
+
 
 
         <MagneticButton strength={0.2}>

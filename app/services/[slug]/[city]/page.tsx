@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { TrackedLink } from '@/components/analytics/tracked-link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, CheckCircle2, MapPin, Phone, Sparkles, Building2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -99,24 +100,38 @@ export default function ServiceCityPage({
             <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
               {content.intro}
             </p>
+
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="group">
-                <Link
+                <TrackedLink
                   href="https://wa.me/966569209216?text=السلام عليكم، إطلعت على موقعكم في جوجل وأرغب في طلب خدمة."
                   target="_blank"
                   rel="noopener noreferrer"
+                  eventName="whatsapp_click"
+                  eventParameters={{
+                    button_location: 'city_service_page',
+                  }}
                 >
                   طلب الخدمة فوراً
                   <ArrowLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
-                </Link>
+                </TrackedLink>
               </Button>
+
               <Button asChild size="lg" variant="outline" className="group">
-                <a href={`tel:${company.phone}`} dir="ltr">
+                <TrackedLink
+                  href={`tel:${company.phone}`}
+                  dir="ltr"
+                  eventName="phone_click"
+                  eventParameters={{
+                    button_location: 'city_service_page',
+                  }}
+                >
                   <Phone className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
                   {company.phone}
-                </a>
+                </TrackedLink>
               </Button>
             </div>
+
           </div>
           <div className="relative animate-fade-in delay-200 aspect-[4/3] overflow-hidden rounded-3xl shadow-card">
             <Image
